@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellowish"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkGreen"
+        android:fontFamily="@font/atomic_age"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Retro To-Do List"
+        android:textColor="@color/beige"
+        android:textSize="26sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:background="@color/beige"
+        android:fontFamily="@font/bad_script"
+        android:hint="Add an item:"
+        android:padding="20dp"
+        android:textColor="@color/darkGreen"
+        android:textColorHint="@color/lighterGreen" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/editText"
+        android:padding="10dp">
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Add"
+            android:fontFamily="@font/atomic_age"
+            android:textColor="@color/beige"
+            android:textSize="20sp"
+            android:backgroundTint="@color/darkGreen"/>
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Delete"
+            android:fontFamily="@font/atomic_age"
+            android:textColor="@color/beige"
+            android:textSize="20sp"
+            android:backgroundTint="@color/darkGreen"/>
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Clear"
+            android:fontFamily="@font/atomic_age"
+            android:textColor="@color/beige"
+            android:textSize="20sp"
+            android:backgroundTint="@color/darkGreen"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_below="@id/linearLayout1"
+        android:text="My To-Do List"
+        android:textColor="@color/lighterGreen"
+        android:fontFamily="@font/atomic_age"
+        android:textSize="20sp"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView2"
+        android:choiceMode="multipleChoice"
+        android:backgroundTint="@color/beige"
+        android:fontFamily="@font/bad_script" />
+</RelativeLayout>
